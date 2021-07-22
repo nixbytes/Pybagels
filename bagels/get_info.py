@@ -42,7 +42,7 @@ def main():
                 break
             if numGuesses > MAX_GUESSES:
                 print("you ran out of guesses")
-                print("The answer was {}".format(secretNum))
+                print("The answer was {}.\n".format(secretNum))
 
         # ask player if they want to play again.
         print("Do you want to play again? (yes or no)")
@@ -51,7 +51,7 @@ def main():
     print("Thanks for playing!")
 
 
-def getSecretNum():
+def getSecretNum() -> str:
     """Returns a string made up of NUM_DIGITS unique random digits."""
     numbers = list("0123456789")  # Create a list of digits 0 to 9.
     random.shuffle(numbers)  # Shuffle them into random order.
@@ -64,7 +64,7 @@ def getSecretNum():
     return secretNum
 
 
-def getClues(guess, secretNum):
+def getClues(guess, secretNum) -> str:
     """Returns a string with the pico, fermi, bagels clues for a guess
     and secret number pair."""
 
