@@ -3,7 +3,7 @@ import random
 NUM_DIGITS = 3
 MAX_GUESSES = 10
 
-def main():
+def main() -> None:
     print(
         """
     
@@ -21,7 +21,7 @@ def main():
         secretNum = getSecretNum()
 
         print(
-            "I have though up a number.\n You have {} guesses to get it.".format(
+            "I have though up a number.\nYou have {} guesses to get it.".format(
                 MAX_GUESSES
             )
         )
