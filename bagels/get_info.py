@@ -56,12 +56,9 @@ def getSecretNum() -> str:
     numbers = list("0123456789")  # Create a list of digits 0 to 9.
     random.shuffle(numbers)  # Shuffle them into random order.
 
-    secretNum = ""
+    # Use Join instead a loop for the return str value
 
-    for i in range(NUM_DIGITS):
-        secretNum += str(numbers[i])
-
-    return secretNum
+    return "".join(str(numbers[i]) for i in range(NUM_DIGITS))
 
 
 def getClues(guess, secretNum) -> str:
