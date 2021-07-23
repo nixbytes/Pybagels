@@ -76,8 +76,9 @@ def getClues(guess, secretNum) -> str:
         elif guess[i] in secretNum:
             clues.append("Pico")
 
-    if len(clues) == 0:
+    # check the len
+    if not len(clues):
         return "Bagels"
-    else:
-        clues.sort()
-        return " ".join(clues)
+    
+    clues.sort()
+    return " ".join(clues)
